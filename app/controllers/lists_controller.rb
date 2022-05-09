@@ -11,8 +11,10 @@ class ListsController < ApplicationController
     if @list.save                     # 3. データをデータベースに保存するためのsaveメソッド実行
      redirect_to list_path(@list.id)
     else
-      render :new
+      render :new   #エラーメッセージを扱う際はrender
     end
+
+
   end
 
   def index
